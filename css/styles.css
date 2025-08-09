@@ -1,0 +1,664 @@
+body, html {
+    margin: auto;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ============================= */
+/*        Responsive Design      */
+/* ============================= */
+/* ----------- TABLETTE ----------- */
+@media screen and (max-width: 1024px) {
+    /* Navbar */
+    nav {
+    gap: 1.5rem;
+        font-size: 1.1rem;
+        margin: 0 2rem;
+    }
+        
+    .nav_links {
+    gap: 1rem;
+        font-size: 1.1rem;
+    }
+        
+    .logo img {
+        height: 5rem;
+    }
+
+    /* Partie Hero */
+    .hero {
+        height: auto;
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+
+    .hero_content {
+        padding: 2rem;
+    }
+
+    .hero_content h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+        
+    .hero_content p {
+    font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+        
+    /* Partie Bien-faits */
+    .benefits_section {
+        flex-direction: column;
+        gap: 3rem;
+    }
+        
+    .benefits_section .benefit_item {
+        width: 80%;
+        margin: auto;
+    }
+        
+    .section_text {
+        gap: 2rem;
+    }
+        
+    .text {
+        width: 100%;
+    }
+        
+    /* Partie About */
+    .about {
+        flex-direction: column;
+        padding: 4rem 2rem;
+        gap: 3rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Partie Prestations */
+    section.prestations {
+        padding: 0 2rem;
+    }
+
+    .prestation {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prestation.reverse {
+        flex-direction: column;
+    }
+
+    .prestation-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Partie Informations  */
+    .info-container {
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .info-item {
+        width: 80%;
+    }
+}
+
+/* ============================= */
+/* ============================= */
+/* ----------- MOBILE ----------- */
+@media screen and (max-width: 768px) {
+    /* Navbar */
+    .nav_links {
+        flex-direction: column;
+        gap: 0.8rem;
+        font-size: 1rem;
+    }
+
+    /* Partie Hero */
+    .hero_content h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero_content p {
+        font-size: 0.95rem;
+    }
+
+    /* Partie bien-faits */
+    .section_title {
+        font-size: 2rem;
+    }
+
+    .benefits_section .benefit_item h3 {
+        font-size: 1.3rem;
+    }
+
+    .benefits_section .benefit_item p {
+        font-size: 0.9rem;
+    }
+
+    .section_text .text .section_titles {
+        font-size: 1.3rem;
+    }
+
+    .section_text .text p {
+        font-size: 0.9rem;
+    }
+
+    /* Partie About */
+    .about-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Partie Prestations */
+    .prestations h2 {
+        font-size: 1.5rem;
+    }
+
+    .prestation-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .prestation-text p {
+        font-size: 0.9rem;
+    }
+
+    /* Partie Commentaires/Avis */
+    .testimonial-card {
+        width: 100%;
+    }
+
+    /* Partie informations */
+    .info-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .info-title {
+        font-size: 1rem;
+    }
+
+    .info-item p {
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+
+/* ============================= */
+/*        Deskstop      */
+/* ============================= */
+/* Partie Navbar du site*/
+
+.navbar {
+    background-color: #f2e0c9; /* Beige background */
+    padding: 1rem 1rem;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0 4rem;
+    font-size: 1.25rem;
+}
+
+.nav_links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+
+/* Soulignement au survol*/
+.nav_links a:hover::after,
+.nav_links a.active::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: -4px;
+}
+
+
+.logo img {
+    height: 7rem;
+}
+
+
+/* Partie Réflexologie haut de page*/
+.hero {
+    position: relative;
+    height: 80vh; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.bg_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.2) 30%, rgba(255,255,255,1) 100%);
+    z-index: -1;
+}
+
+.hero_content {
+    position: relative;
+    padding: 15rem;
+    border-radius: 12px;
+ 
+}
+
+.hero_content h1 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.hero_content p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 4rem;
+}
+
+
+button {
+    background-color: #f2e0c9;
+    color: white;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hero_button:hover {
+    background-color: black;
+}
+
+/* Partie icons bien-être */
+.benefit_section {
+    text-align: center;
+    padding: 0rem 0rem;
+}
+
+.section_title {
+  font-size: 3.25rem;
+  font-weight: bold;
+  margin-bottom: 8rem;
+}
+
+.benefits_section {
+  display: flex;
+  justify-content: center;
+  gap: 9rem;
+  margin-top: 5rem;
+}
+
+.benefits_section .benefit_item {
+  text-align: center;
+  width: 20%;
+}
+
+.benefits_section .benefit_item i {
+  font-size: 5.5rem;
+  color: black;
+  margin-bottom: 2.5rem;
+}
+
+.benefits_section .benefit_item h3 {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+.benefits_section .benefit_item p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+    font-style: italic;
+    
+}
+
+.section_text {
+    display: flex;
+    justify-content: center;
+    gap: 12rem;
+    margin-top: 7rem;
+}
+
+.text {
+    text-align: center;
+    width: 50%;
+}
+
+.section_text .text .section_titles {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+}
+
+.section_text .text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+    font-style: italic;
+}
+
+
+/* Partie presentation */
+
+.about {
+    display: flex;
+    padding: 30px;
+    padding: 10rem;
+    width: 50%;
+    gap: 7rem;
+    margin: auto;
+}
+
+.about-image {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.about-text {
+    max-width: 550px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.about-button {
+    background-color: #f2e0c9;
+    color: white;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+ .about-button:hover {
+    background-color: black;
+}
+
+/* Partie prestations séances */
+section.prestations {
+    width: auto;
+    margin: 0 auto;
+    padding: 0 15rem;
+    font-family: Arial, sans-serif;
+}
+
+.prestations h2 {
+    font-size: 2.25rem;
+    margin-bottom: 5rem;
+}
+
+.prestation {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+
+.prestation-image {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.prestation-text {
+    flex: 1;
+}
+
+.prestation-text h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.prestation-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.psb {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.psb p {
+    font-size: 1.25rem;
+}
+
+.psb-button {
+    background-color: #f2e0c9;
+    color: white;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.psb-button:hover {
+    background-color: black;
+}
+
+
+/* Partie avis client */
+.testimonial-section {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  background-color: #f2e0c9;
+}
+
+.testimonial-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.testimonial-time {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.stars {
+  color: gold;
+  font-size: 0.9rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Parti informations */
+.info-section {
+  background-color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 3rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  width: 250px;
+  text-align: left;
+}
+
+.info-icon {
+  font-size: 1.8rem;
+}
+
+.info-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.info-item p {
+  margin: 2px 0;
+}
+
+.map-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Partie Footer */
+.site-footer {
+  background-color: #f2e0c9;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: black;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-socials {
+  margin-bottom: 1rem;
+}
+
+.footer-socials a img {
+  width: 30px;
+  height: 30px;
+  margin: 0 8px;
+
+  transition: transform 0.2s ease;
+}
+
+.footer-socials a img:hover {
+  transform: scale(1.1);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: black;
+  margin: 0;
+}

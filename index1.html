@@ -1,23 +1,22 @@
-<html lang="FR">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Réflexologie plantaire et parlmaire</title>
+    <title>Réflexologie plantaire et parlmaire à propos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/app.js"></script>
+    <link rel="stylesheet" href="./css/styles1.css">
 </head>
 <body>
-    <!-- Partie Navbar-->
     <header class="navbar">
         <nav>
             <ul class="nav_links">
-                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./index1.html">Accueil</a></li>
                 <li><a href="./Apropos.html">A propos</a></li>
             </ul>
             
             <div class="logo">
-                <a href="./index.html"><img src="./img/Logos.png" alt="Logo reflexologie"></a>
+                <a href="./index1.html"><img src="./img/Logos.png" alt="Logo reflexologie"></a>
             </div>
 
             <ul class="nav_links">
@@ -26,12 +25,12 @@
             </ul>
         </nav>
     </header>
-
+    
     <!-- Partie presentation reflexologie -->
     <section class="hero" id="hero">
         <img src="./img/Réflexologie.jpg" alt="Salle de reflexologie" class="bg_image">
         <div class="gradient-overlay"></div>
-            <div class="hero_content">
+            <div class="hero_content fade-in">
                 <h1>La réflexologie plantaire et palmaire</h1>
                 <p>
                     La réflexologie est une méthode de soin douce et naturelle, <br>
@@ -41,13 +40,11 @@
                     En les massant ou en exerçant une pression,  on cherche à rétablir l'équilibre du corps,   <br>
                     soulager le stress,  améliorer la circulation et favoriser l'auto-guérison.
                 </p>
-                <button class="hero_button">En savoir plus</button>
+                <button type="submit" class="btn-submit">En savoir plus</button>
             </div>
     </section>
 
-
-    <!-- Partie Bien-faits -->
-    <section class="benefit_section" id="benefit_section">
+    <section class="benefit_section fade-in" id="benefit_section">
         <h2 class="section_title">Bien-faits</h2>
 
             <div class="benefits_section">
@@ -84,7 +81,7 @@
     </section>
 
     <!-- Partie presentation personnel-->
-    <section class="about">
+    <section class="about fade-in">
         <img src="./img/Presentation" alt="Photo de profil" class="about-image">
         <div class="about-text">
                 <h2>À PROPOS DE MOI ?</h2>
@@ -93,12 +90,12 @@
                     Itaque eveniet cupiditate facere rem sapiente! Enim atque vel voluptatem quasi excepturi repudiandae incidunt in ducimus sapiente, 
                     aliquid dolor veniam fugiat mollitia blanditiis quis repellendus voluptate fugit illum facere eos, officiis illo?
                     </p>
-                <button class="about-button">En savoir plus</button>
+                <button type="submit" class="btn-submit">En savoir plus</button>
         </div>
     </section>
 
     <!-- Partie prestations séances-->
-    <section class="prestations">
+    <section class="prestations fade-in">
         <h2>Prestations et séances</h2>
             <div class="prestation">
                 <img src="./img/Reflexologue Plantaire et palmaire.jpg" alt="Réflexologie plantaire" class="prestation-image">
@@ -135,12 +132,12 @@
             </div>
             <div class="psb">
                 <p><strong>Pour plus d'informations sur les séances </strong></p>
-                <button class="psb-button">En savoir plus</button>
+                <button type="submit" class="btn-submit">En savoir plus</button>
             </div>
     </section>
 
     <!-- Partie avis client-->
-     <section class="testimonial-section">
+     <section class="testimonial-section fade-in">
         <h2>Témoignages de bien-être</h2>
             <div class="testimonial-container">
             <div class="testimonial-card">
@@ -183,7 +180,7 @@
   </section>
 
          <!-- Partie information-->
-    <section class="info-section">
+    <section class="info-section fade-in">
         <h2>Pour plus d'information , n'hésitez pas à me contacter</h2>
             <div class="info-container">
                 <div class="info-item">
@@ -227,27 +224,27 @@
                 loading="lazy">
             </iframe>
         </div>
-        <button class="about-button">Contactez-moi</button>
-</section>
+        <button type="submit" class="btn-submit">Contactez-nous</button>
+    </section>
+    
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">CGU</a>
+            <a href="#">CGV</a>
+        </div>
 
-<footer class="site-footer">
-  <div class="footer-links">
-    <a href="#">Politique de confidentialité</a>
-    <a href="#">CGU</a>
-    <a href="#">CGV</a>
-  </div>
+        <div class="footer-socials">
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </div>
+        <p class="footer-copy">&copy; <span id="year"></span> Réflexologie. Tous droits réservés.</p>
+    </footer>
 
-  <div class="footer-socials">
-    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-    </a>
-    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-    </a>
-  </div>
-
-  <p class="footer-copy">&copy; <span id="year"></span> Réflexologie. Tous droits réservés.</p>
-</footer>
-
-</body> 
+</body>
+<script src="./js/script.js"></script>
 </html>

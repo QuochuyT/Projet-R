@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réflexologie plantaire et parlmaire contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="./index1.html">Accueil</a></li>
+                <li><a href="./Apropos.html">A propos</a></li>
+            </ul>
+            
+            <div class="logo">
+                <a href="./index1.html"><img src="./img/Logos.png" alt="Logo reflexologie"></a>
+            </div>
+            
+            <ul class="nav_links">
+                <li><a href="./Prestations.html">Prestations</a></li>
+                <li> <a href="./Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>   
+    
+    <section class="contact-section">
+        <h1>Contactez-nous</h1>
+        <p class="intro">
+            Pour toute question, prise de rendez-vous ou demande d'informations, n'hésitez pas à nous écrire via le formulaire ci-dessous.
+        </p>
+
+        <div class="contact-container">
+            <!-- Formulaire -->
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nom prénom</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Votre email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <input type="text" id="subject" name="subject" placeholder="Sujet de votre message" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Votre message..." rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
+
+            <!-- Infos -->
+            <div class="contact-info">
+                <img src="./img/Logos.png" alt="Logo Réflexologie" class="info-logo">
+                    <h2>Informations</h2>
+                        <p><strong>Adresse :</strong> 123 Rue du Bien-être, 75000 Paris</p>
+                        <p><strong>Téléphone :</strong> 06 12 34 56 78</p>
+                        <p><strong>Email :</strong> contact@reflexologie.fr</p>
+
+                <!-- Carte Google Maps -->
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.999104550291!2d2.292292615674633!3d48.8583730792871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fddfdb0f6ab%3A0x2fbb0b9f0c0d42d6!2sTour%20Eiffel%2C%20Champ%20de%20Mars%2C%207%20Av.%20Anatole%20France%2C%2075007%20Paris%2C%20France!5e0!3m2!1sfr!2sfr!4v1691423723840!5m2!1sfr!2sfr" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+       <footer class="site-footer">
+        <div class="footer-links">
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">CGU</a>
+            <a href="#">CGV</a>
+        </div>
+
+        <div class="footer-socials">
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </div>
+        <p class="footer-copy">&copy; <span id="year"></span> Réflexologie. Tous droits réservés.</p>
+    </footer>
+</body>
+<script src="./js/app.js"></script>
+</html>

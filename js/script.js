@@ -73,4 +73,46 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    let lastScrollTop = 0;
+    const navbar = document.querySelector(".navbar");
+
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY;
+            
+        // Ajouter une ombre dès qu’on scrolle un peu
+        if (scrollTop > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+
+        // Vérifier sens du scroll
+        if (scrollTop > lastScrollTop) {
+        // Descente → cacher la navbar
+            navbar.classList.add("hide");
+        } else {
+            // Montée → afficher la navbar
+            navbar.classList.remove("hide");
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // éviter valeurs négatives
+        });
+    
+    /**    window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY;
+
+        if (scrollTop > lastScrollTop) {
+        // On descend
+            navbar.classList.add("down");
+            navbar.classList.remove("up");
+        } else {
+        // On remonte
+            navbar.classList.add("up");
+            navbar.classList.remove("down");
+        }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // sécurité
+}); */
+    
+
 });

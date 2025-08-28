@@ -9,17 +9,37 @@ body {
   font-family: 'Poppins', 'Roboto', sans-serif;
 }
 
-.page-fixed {
+ .page-fixed {
     width: 1200px; /* Largeur fixe */
     min-width: 1200px;
     margin: 0 auto;
-}
+} 
 
 /* Partie Navbar du site*/
 .navbar {
     background-color: #f2e0c9; /* Beige background */
     padding: 1rem 1rem;
     position: relative;
+}
+
+/* Fixer la navbar en haut et transition douce */
+.navbar { /* fixée en haut */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Quand on scrolle */
+.navbar.scrolled {
+  background-color: #e6d3b8; /* un beige un peu plus foncé pour montrer l'effet */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* petite ombre */
+}
+
+/* Effet slide (navbar qui se cache/affiche) */
+.navbar.hide {
+  transform: translateY(-100%);
 }
 
 nav {

@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // éviter valeurs négatives
-        });
+        }); 
     
     /**    window.addEventListener("scroll", function () {
             let scrollTop = window.scrollY;

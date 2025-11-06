@@ -100,44 +100,97 @@ section.prestations h2 {
     margin: 2rem 0 1rem;
 }
 
-/* --- Service Cards --- */
+
+
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+  align-items: stretch;
 }
+
 .card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  display: flex;           /* ✅ rend la carte flexible */
+  flex-direction: column;  /* pour que le contenu s’empile verticalement */
 }
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
+
 .card-content {
-    padding: 1rem;
+  flex: 1;                 /* ✅ prend toute la hauteur restante dans la card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* espace texte / prix */
+  position: relative;
+  padding: 1rem;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
 .card-content h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    color: #5a4b3b;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: #5a4b3b;
 }
+
 .card-content p {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 2.5rem; /* espace au-dessus du prix */
 }
+
+/* --- PRIX EN BAS À GAUCHE --- */
 .card-content .price {
-    font-weight: bold;
-    color: #333;
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  font-weight: 600;
+  color: #5a4b3b;
+  background: rgba(90, 75, 59, 0.08);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .price {
+  background: #5a4b3b;
+  color: #fff;
+}
+
+.scroll-text {
+  max-height: 120px; /* hauteur visible du texte */
+  overflow-y: auto;
+  padding-right: 5px;
+  scrollbar-width: thin; /* pour Firefox */
+  scrollbar-color: #c0b8b0 transparent;
+}
+
+/* Style pour les scrollbars Webkit (Chrome, Edge, Safari) */
+.scroll-text::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-text::-webkit-scrollbar-thumb {
+  background-color: #b6a89a;
+  border-radius: 3px;
+}
+.scroll-text::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 /* --- Contact button --- */

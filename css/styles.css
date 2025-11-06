@@ -147,8 +147,84 @@ nav {
   background: #3e3226;
 }
 
-/* Partie icons bien-être */
+
+/* === SECTION STYLING === */
 .benefit_section {
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.section_title {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  font-weight: 700;
+  color: #1d3557;
+  position: relative;
+}
+
+.section_title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* === GRID CONTAINER === */
+.benefits_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  margin-top: 7rem;
+  justify-items: center;
+}
+
+
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.benefit_item:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+.benefit_item i {
+  font-size: 4.5rem;
+  color: #457b9d;
+  margin-bottom: 20px;
+  transition: transform 0.6s ease, color 0.4s ease;
+}
+
+.benefit_item:hover i {
+  transform: rotate(10deg) scale(1.1);
+  color: #1d3557;
+}
+
+/* === TEXT === */
+.benefit_item h3 {
+  font-size: 2rem;
+  color: #1d3557;
+  margin-bottom: 10px;
+}
+
+.benefit_item p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Partie icons bien-être */
+/* .benefit_section {
     text-align: center;
     padding: 0rem 0rem;
 }
@@ -158,6 +234,8 @@ nav {
   font-weight: bold;
   margin-bottom: 8rem;
 }
+
+
 
 .benefits_section {
   display: flex;
